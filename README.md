@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# Major-General Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PWA for memorizing "I Am the Very Model of a Modern Major-General" via a cumulative-snowball drill paced by a metronome.
 
-Currently, two official plugins are available:
+## Stack
+React + Vite + TypeScript + Tailwind, Web Audio + SoundTouchJS, Firebase (Auth + Firestore + Hosting), `vite-plugin-pwa`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Dev
+```bash
+cp .env.example .env.local   # fill with your Firebase web config
+npm install
+npm run dev
+```
+The chunk-marker tool is at `/marker` in dev mode.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Build + Deploy
+```bash
+npm run build
+firebase deploy
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Before first deploy, replace `REPLACE_WITH_FIREBASE_PROJECT_ID` in `.firebaserc` with your Firebase project ID.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Test
+```bash
+npm run test           # unit + component (vitest)
+npm run test:e2e       # playwright happy path
 ```
+
+## Spec
+Design: `docs/superpowers/specs/2026-05-19-major-general-practice-app-design.md` (in parent docs tree).
+Plan: `docs/superpowers/plans/2026-05-19-major-general-practice-app.md` (in parent docs tree).
+
+## Manual test plan
+See `docs/manual-test-checklist.md`.
