@@ -1,0 +1,58 @@
+{
+  "id": "major-general",
+  "title": "Modern Major-General",
+  "sourceAudio": "/audio/major-general-vocal.mp3",
+  "originalBpm": 130,
+  "verses": [
+    {
+      "id": "v1",
+      "label": "Verse 1",
+      "chunks": [
+        {
+          "id": "v1-A",
+          "label": "A",
+          "lines": [
+            "I am the very model of a modern Major-General,",
+            "I've information vegetable, animal, and mineral,"
+          ],
+          "startSec": 0.0,
+          "endSec": 4.0,
+          "beats": 8
+        },
+        {
+          "id": "v1-B",
+          "label": "B",
+          "lines": [
+            "I know the kings of England, and I quote the fights historical,",
+            "From Marathon to Waterloo, in order categorical;"
+          ],
+          "startSec": 4.0,
+          "endSec": 8.0,
+          "beats": 8
+        },
+        {
+          "id": "v1-C",
+          "label": "C",
+          "lines": [
+            "I'm very well acquainted, too, with matters mathematical,",
+            "I understand equations, both the simple and quadratical,"
+          ],
+          "startSec": 8.0,
+          "endSec": 12.0,
+          "beats": 8
+        },
+        {
+          "id": "v1-D",
+          "label": "D",
+          "lines": [
+            "About binomial theorem I'm teeming with a lot o' news,",
+            "With many cheerful facts about the square of the hypotenuse."
+          ],
+          "startSec": 12.0,
+          "endSec": 16.0,
+          "beats": 8
+        }
+      ]
+    }
+  ]
+}
