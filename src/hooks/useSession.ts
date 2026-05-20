@@ -49,11 +49,16 @@ export function useSession(params: UseSessionParams) {
       initializedRef.current = true;
       await params.engine.playCountIn(bpmRef.current);
     }
+    // Sync the ref immediately so the loop doesn't sleep 150ms waiting for the
+    // setPaused state update to propagate — the engine resolved playCountIn
+    // early specifically so we can schedule the next step without a gap.
+    pausedRef.current = false;
     setPaused(false);
     if (!runner.current) runner.current = loop();
   };
 
   const pause = () => {
+    pausedRef.current = true;
     setPaused(true);
     params.engine.stop();
   };
