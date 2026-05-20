@@ -33,3 +33,7 @@ Plan: `docs/superpowers/plans/2026-05-19-major-general-practice-app.md` (in pare
 
 ## Manual test plan
 See `docs/manual-test-checklist.md`.
+
+## Audio attribution
+
+The vocal recording at `public/audio/major-general-vocal.mp3` is from a 1929 D'Oyly Carte Opera Company recording of *The Pirates of Penzance*, conducted by Malcolm Sargent, with George Baker as the Major-General. Sourced from the [Internet Archive](https://archive.org/details/GILBERTSULLIVANThePiratesOfPenzance1929-NEWTRANSFER) under **CC BY-NC-SA 3.0**. Non-commercial use only; derivatives must share alike.
